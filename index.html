@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* ==== Reset & Base ==== */
+  
     *, *::before, *::after {
       margin: 0;
       padding: 0;
@@ -45,7 +45,7 @@
       display: block;
     }
 
-    /* ==== Navbar ==== */
+    /* ____ navbar____ */
     .navbar {
       display: flex;
       align-items: center;
@@ -67,7 +67,7 @@
       border-radius: 50%;
     }
 
-    /* Hamburger */
+    /*____ hamburger ____*/
     .hamburger {
       display: none;
       flex-direction: column;
@@ -96,7 +96,7 @@
       transform: rotate(-45deg) translate(6px, -6px);
     }
 
-    /* Nav Links */
+    /*____ nav links ____*/
     .nav-links {
       display: flex;
       gap: 16px;
@@ -110,9 +110,31 @@
       transition: color 0.2s;
     }
 
-    .nav-links a:hover {
-      color: #c23cb6;
+
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
     }
+
+    .nav-link:hover {
+      color: #ec4899;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 50%;
+      background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+  }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
 
     .login-btn {
       padding: 6px 14px;
@@ -135,6 +157,10 @@
       font-weight: 600;
       font-size: 13px;
     }
+    .donate-btn:hover {
+      border: 1px solid #c23cb6;
+      box-shadow:0 1px 10px 3px #c23cb6;
+    }
 
     .nav-search input {
       padding: 6px 10px;
@@ -145,7 +171,7 @@
       width: 130px;
     }
 
-    /* Dropdown */
+    /*____ Dropdown____ */
     .dropdown {
       position: relative;
     }
@@ -178,7 +204,7 @@
       display: block;
     }
 
-    /* ==== Hero Section ==== */
+    /* ___ hero section___  */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -253,7 +279,7 @@
       border-color: #E91E63;
     }
 
-    /* ==== Animated Logo ==== */
+    /* ___animated logo ___ */
     .logo-container {
       margin: 32px 0;
       width: 100%;
@@ -318,7 +344,7 @@
       100% { opacity: 0; transform: scale(0); }
     }
 
-    /* ==== Stats ==== */
+    /* ____stats ____ */
     .stats {
       position: absolute;
       bottom: 20px;
@@ -364,7 +390,7 @@
       box-shadow: 0 4px 15px rgba(233,30,99,0.4);
     }
 
-    /*  Footer  */
+    /* ____ Footer ____ */
     .footer {
       background: #273147;
       color: #e5e7eb;
@@ -477,7 +503,7 @@
       margin-top: 1rem;
     }
 
-    /* ==== Responsive ==== */
+    /* _____ Responsive _______ */
     @media (max-width: 768px) {
       .hamburger {
         display: flex;
@@ -604,7 +630,7 @@
 
 <body>
 
-  <!-- Navbar -->
+  <!-- navbar    -->
   <nav class="navbar">
     <div class="nav-logo">
       <img src="./img/Girls Space (1) (1).png" alt="GirlsSpace Logo">
@@ -617,12 +643,12 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Chat</a></li>
-      <li><a href="#">Stories</a></li>
-      <li><a href="#">Programs</a></li>
-      <li><a href="#">Support</a></li>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium" >Home</a>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">About</a>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Chat</a>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Stories</a>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Programs</a>
+      <a href="#" class="nav-link text-gray-700 hover:text-pink-600 px-3 py-2 text-sm font-medium">Support</a>
 
       <li class="dropdown">
         <a href="#">Languages</a>
@@ -638,15 +664,16 @@
       <li><a href="#" class="donate-btn">Donate</a></li>
     </ul>
 
+
     <div class="nav-search">
       <input type="text" placeholder="Search...">
     </div>
   </nav>
 
-  <!-- Overlay -->
+  <!--     overlay  -->
   <div class="nav-overlay"></div>
 
-  <!-- Hero Section -->
+  <!--  hero section   -->
   <section class="hero">
     <div class="content">
       <h1 class="title">Your Safe <span>Digital Space</span></h1>
@@ -700,11 +727,11 @@
     <div class="info-icon">i</div>
   </section>
 
-  <!-- Footer -->
+  <!-- footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <!-- About -->
+        <!-- about -->
         <div class="footer-about">
           <div class="logo-section">
             <img src="./img/Girls Space (1) (1).png" alt="Logo">
@@ -721,7 +748,7 @@
           </div>
         </div>
 
-        <!-- Quick Links -->
+        <!-- quick links -->
         <div>
           <h4 class="links-title">Quick Links</h4>
           <ul class="links-list">
@@ -731,7 +758,7 @@
           </ul>
         </div>
 
-        <!-- Get Help -->
+        <!-- get help -->
         <div>
           <h4 class="links-title">Get Help</h4>
           <ul class="links-list">
@@ -742,7 +769,7 @@
         </div>
       </div>
 
-      <!-- Footer Bottom -->
+      <!-- footer bottom -->
       <div class="footer-bottom">
         <p>© 2024 GirlsSpace Mahama. <span style="color:#d1d5db;">Empowering girls, always.</span></p>
         <div class="footer-info">
