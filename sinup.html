@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | GirlsSpace Mahama</title>
+  <title>Sign Up | GirlsSpace Mahama</title>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -60,9 +60,9 @@
           <a href="index.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Home</a>
           <a href="about.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">About</a>
           <a href="chat.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Chat</a>
-          <a href="#" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Stories</a>
-          <a href="#" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Programs</a>
-          <a href="#" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Support</a>
+         <a href="./Stories.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Stories</a>
+          <a href="./Programs.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Programs</a>
+          <a href="./Support.html" class="text-dark hover:text-accent font-medium relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-accent after:to-primary after:bottom-[-4px] after:left-1/2 after:transform after:-translate-x-1/2 after:transition-all hover:after:w-full">Support</a>
 
           <!-- Language Dropdown -->
           <div class="relative" id="language-dropdown">
@@ -119,10 +119,16 @@
   <main class="max-w-7xl mx-auto px-4 py-12">
     <div class="space-y-8">
 
-      <!-- Login Form -->
-      <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md mx-auto">
-        <h1 class="text-3xl font-bold text-purple-800 text-center mb-6">Welcome Back!</h1>
-        <form id="loginForm" class="space-y-5">
+      <!-- Sign Up Form -->
+      <div class="bg-white p-8 rounded-2xl shadow-xl max-w-lg mx-auto">
+        <h1 class="text-3xl font-bold text-purple-800 text-center mb-6">Create Account</h1>
+        <form id="signupForm" class="space-y-5">
+          <div>
+            <label for="fullName" class="block text-sm font-medium text-dark mb-2">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" required
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition">
+          </div>
+
           <div>
             <label for="email" class="block text-sm font-medium text-dark mb-2">Email Address</label>
             <input type="email" id="email" placeholder="you@example.com" required
@@ -131,25 +137,18 @@
 
           <div>
             <label for="password" class="block text-sm font-medium text-dark mb-2">Password</label>
-            <input type="password" id="password" placeholder="Enter your password" required
+            <input type="password" id="password" placeholder="Create a strong password" required
                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition">
           </div>
 
-          <div class="flex items-center justify-between text-sm">
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" id="remember" class="w-4 h-4 text-primary rounded focus:ring-primary">
-              <span>Remember me</span>
-            </label>
-            <a href="./Forgot_password.html" class="text-primary hover:underline font-medium">Forgot password?</a>
-          </div>
 
           <div class="flex flex-col sm:flex-row gap-3">
-            <button type="submit" class="flex-1 px-6 py-3 bg-gradient-to-r from-accent to-primary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/40 transition">
-              Login
+            <button type="submit" class="flex-1 px-1 py-1 bg-gradient-to-r from-accent to-primary text-white rounded-full font-semibold hover:shadow-lg hover:shadow-primary/40 transition">
+              Sign Up
             </button>
-            <button type="button" 
-                    class="flex-1 px-6 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-purple-50 transition">
-             <a href="./sinup.html"> Sign Up</a>
+            <button type="button" onclick="window.location.href='login.html'"
+                    class="flex-1 px-4 py-3 border-2 border-primary text-primary rounded-full font-semibold hover:bg-purple-50 transition">
+              Already have account?
             </button>
           </div>
         </form>
@@ -165,11 +164,11 @@
         <!-- Left -->
         <div class="space-y-4 text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-3">
-            <img src="img/Girls Space (1) (1).png" alt="Logo" class="w-12 h-12 object-contain rounded-full border-2 border-accent">
+            <img src="img/girls-space-logo.png" alt="Logo" class="w-12 h-12 object-contain rounded-full border-2 border-accent">
             <p class="text-pink-400 font-semibold">Empowering Girls, Building Futures</p>
           </div>
           <p class="text-sm text-gray-400 max-w-xs mx-auto md:mx-0">
-            A safe digital haven for girls in Mahama refugee camp.
+            A safe digital haven for girls in Mahama refugee camp, Rwanda.
           </p>
           <div class="flex justify-center md:justify-start gap-3">
             <a href="#" class="w-10 h-10 bg-gray-800 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:bg-gray-700 hover:text-white transition">
@@ -191,8 +190,8 @@
         <div class="text-center md:text-left">
           <h4 class="text-white font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-2 text-sm">
-            <li><a href="chat.html" class="hover:text-pink-400 transition">Join Chat</a></li>
-            <li><a href="#" class="hover:text-pink-400 transition">Share Story</a></li>
+            <li><a href="./chat.html" class="hover:text-pink-400 transition">Join Chat</a></li>
+            <li><a href="./story" class="hover:text-pink-400 transition">Share Story</a></li>
           </ul>
         </div>
 
@@ -207,7 +206,7 @@
       </div>
 
       <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
-        <p>© 2024 GirlsSpace Mahama. <span class="text-purple-500 font-medium">Empowering girls, always.</span></p>
+        <p>© 2025 GirlsSpace Mahama. <span class="text-purple-500 font-medium">Empowering girls, always.</span></p>
         <div class="text-center md:text-right">
           <p>Available in: English, Français, Kiswahili, Kinyarwanda, العربية</p>
           <p>Supported by UNHCR, Save The Children, Alight</p>
@@ -215,5 +214,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
